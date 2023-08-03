@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    {{ titulopagina }}
+{% endblock %}
+
+{% block conteudo %}
+    <div class="py-5">
+        {% if not g.user %}
+            <header class="h-100 p-5 text-white bg-dark text-center justify-content-center align-items-center">
+                <h1 class="display-5 fw-bold">{% block empresa %}{{ rsoc }}{% endblock %}</h1>
+                <br>
+                <p class="fs-4" style="color: white;">Olá, seja bem vindo! Clique no botão abaixo para entrar</p>
+                <br>
+                <a class="btn btn-success" type="button" href="{{ url_for('auth.login') }}">Iniciar</a>
+            </header>
+        {% endif %}
+    </div>
+{% endblock %}

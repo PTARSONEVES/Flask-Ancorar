@@ -1,0 +1,23 @@
+body{
+    background: #202124;
+    background: -webkit-linear-gradient(to right, rgb(2, 1, 37), rgb(7, 24, 54)) !important;
+    background: linear-gradient(to right, rgb(2, 1, 37), rgb(7, 24, 54)) !important
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #1d0635;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(30, 30, 56), rgba(7, 24, 54, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(23, 21, 56), rgb(3, 8, 19))
+    }

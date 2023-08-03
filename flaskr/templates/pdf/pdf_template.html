@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Sr(a):  <span>{{ dados['responsavel'] }}</span></h3>
+        <p>Total de hóspedes: {{ dados['qtpessoas'] }} pessoa(s)</p>
+        <p>Data do check-in: {{ dados['check_in'] }} a partir das 14:00hs</p>
+        <p>Data do check-out: {{ dados['check_out'] }} até as 12:00hs</p>
+        <p>Valor da Estadia: R${{ dados['valor'] }}</p>
+        <p>Valor pago: R${{ dados['valor_pago'] }}, através de {{ dados['forma_pago'] }}</p>
+        <p>Saldo a pagar até o check-in: R${{ dados['saldo'] }}, através de {{ dados['forma_saldo'] }}</p>
+    <div>Dados da Reserva
+        <div>Dados Financeiros</div>
+    </div>
+    </div>
+    <footer>Teste</footer>
+</body>
+</html>
