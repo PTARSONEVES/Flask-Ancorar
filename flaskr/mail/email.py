@@ -5,15 +5,16 @@ from email.mime.base import MIMEBase
 from email import encoders
 from datetime import datetime
 from flask import current_app
+from ..config import BaseConfig
 
 
 def sendmail(email,subject,html):
 
-    me = "Squallo"
-    port = current_app.config['MAIL_PORT']
-    smtp_server = current_app.config['MAIL_SERVER']
-    sender_email = current_app.config['MAIL_USERNAME']
-    password = current_app.config['MAIL_PASSWORD']
+    me = BaseConfig.EMPRESA_NOMFAN[0]
+    port = BaseConfig.MAIL_PORT[0]
+    smtp_server = BaseConfig.MAIL_SERVER[0]
+    sender_email = BaseConfig.MAIL_USERNAME[0]
+    password = BaseConfig.MAIL_PASSWORD[0]
 
     # Create message container - the correct MIME type is multipart/alternative.
     msg = MIMEMultipart('alternative')
@@ -37,12 +38,19 @@ def sendmail(email,subject,html):
     msg.attach(part2)
 
 #    try:
+    print('Enviando...')
     mail = smtplib.SMTP(smtp_server, port)
+    print('Enviando 1...')
     mail.ehlo()
+    print('Enviando 2...')
     mail.starttls()
+    print('Enviando 3...')
     mail.login(sender_email, password)
+    print('Enviando 4...')
     mail.sendmail(sender_email, email, msg.as_string())
+    print('Enviando 5...')
     mail.quit()
+    print('Mensagem enviada...')
 #    except:
 
 def sendpdf(email,file,subject):
