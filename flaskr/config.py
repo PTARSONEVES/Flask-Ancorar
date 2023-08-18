@@ -32,12 +32,12 @@ class BaseConfig(object):
     TYPE_CONNECT = 'mysql'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 #    MYSQL_CONNECT='mysql://ptarsoneves:Strolandia1@database-1.cizel514jz3i.us-east-2.rds.amazonaws.com/flask_layout'
-    MYSQL_CONNECT = 'mysql://root@localhost/flask_ancorar'
+    MYSQL_CONNECT = 'mysql://root@localhost/flask_layout'
     MYSQL_HOST = 'localhost'
     MYSQL_USER = 'root'
     MYSQL_PASS = ''
     MYSQL_PORT = '3306'
-    MYSQL_DATABASE = 'flask_ancorar'
+    MYSQL_DATABASE = 'flask_layout'
     SQLITE_CONNECT = 'sqlite:///' + os.path.join(basedir, 'dev.sqlite')
     #CORRESPONDENCIA
     MAIL_SERVER='smtp.office365.com',
